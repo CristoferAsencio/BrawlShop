@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>>Catálogo - BrawlWear</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+          margin: 0;
+          font-family: 'Bangers', cursive;
+          background: linear-gradient(#0a0a0a, #1a1a1a);
+          color: #fff;
+        }
+    
+        header {
+          background: #ffcc00;
+          padding: 20px;
+          text-align: center;
+          color: #000;
+          font-size: 2.5em;
+          text-shadow: 2px 2px #fff;
+        }
+    
+        section {
+          padding: 40px 20px;
+          text-align: center;
+        }
+    
+        h1 {
+          margin-bottom: 40px;
+          font-size: 3em;
+        }
+    
+        .catalogo {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+          padding: 20px;
+        }
+    
+        .producto {
+          background: #292929;
+          border: 2px solid #ffcc00;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 0 20px #ffcc00;
+          transition: transform 0.3s;
+        }
+    
+        .producto:hover {
+          transform: scale(1.05);
+        }
+    
+        .producto img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+        }
+    
+        .producto h3 {
+          margin: 15px 0;
+          color: #ffcc00;
+          font-size: 1.8em;
+        }
+    
+        .producto p {
+          font-size: 1.2em;
+          padding: 0 10px 20px;
+          color: #ccc;
+        }
+    
+        .btn {
+          display: inline-block;
+          margin-top: 20px;
+          padding: 12px 25px;
+          background: #ff3333;
+          color: white;
+          font-size: 1.2em;
+          border-radius: 50px;
+          text-decoration: none;
+          transition: background 0.3s;
+        }
+    
+        .btn:hover {
+          background: #cc0000;
+        }
+    
+        footer {
+          background: #111;
+          color: #777;
+          text-align: center;
+          padding: 20px;
+          font-size: 0.9em;
+          margin-top: 40px;
+        }
+      </style>
+</head>
+<body>
+   
+      <header>
+        ¡Nuestro Catálogo Épico!
+      </header>
+      <div class="barras"><button onclick="abrir_cerrar_menu()" class="boton_menu" id="x"></button>
+      </div>
+      <nav id="menu" class="desplegable">
+          <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="Colecciones.html">Colecciones</a></li>
+              <li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
+              <li><a href="Contactanos.html">Contactanos</a></li>
+
+          </ul>
+      </nav>
+      
+      <section>
+        <h1>🔥 Elige tu estilo de batalla 🔥</h1>
+      
+        <div class="catalogo">
+      
+          <div class="producto">
+            <img src="leon camisa.jpg" alt="Camiseta Leon">
+            <h3>Camiseta León Invisible</h3>
+            <p>Conviértete en leyenda con este diseño ultra épico.</p>
+            <a href="#" class="btn">Comprar</a>
+          </div>
+      
+          <div class="producto">
+            <img src="spike camisa.jpg" alt="Camiseta Spike">
+            <h3>Camiseta Spike Explosivo</h3>
+            <p>Explota tu estilo con Spike y sé el alma de la partida.</p>
+            <a href="#" class="btn">Comprar</a>
+          </div>
+      
+          <div class="producto">
+            <img src="hoodie crow.jpg" alt="Hoodie Crow">
+            <h3>Hoodie Crow Oscuro</h3>
+            <p>Ideal para quienes atacan desde las sombras. 🔥</p>
+            <a href="#" class="btn">Comprar</a>
+          </div>
+      
+          
+      
+          <div class="producto">
+            <img src="mochila brawl.jpg" alt="Mochila Brawl Stars">
+            <h3>Mochila Súper Brawl</h3>
+            <p>Lleva tu poder a todas partes con esta mochila legendaria.</p>
+            <a href="#" class="btn">Comprar</a>
+          </div>
+      
+          <div class="producto">
+            <img src="sudadera bibi.jpg" alt="Sudadera Bibi">
+            <h3>Sudadera Bibi Salvaje</h3>
+            <p>Para quienes rompen las reglas con estilo.</p>
+            <a href="#" class="btn">Comprar</a>
+          </div>
+      
+          <div class="producto">
+            <img src="pantalon brawl.jpg" alt="Pantalones">
+            <h3>Pantalón Brawler Power</h3>
+            <p>Comodidad y resistencia para largas sesiones de batalla.</p>
+            <a href="#" class="btn">Comprar</a>
+          </div>
+      
+        </div>
+      
+      </section>
+      <footer>
+        © 2025 BrawlWear. No oficial de Supercell, pero 100% hecho con pasión.
+      </footer>
+      <script src="main.js"></script>
+      
+    
+</body>
+</html>

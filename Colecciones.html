@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colecciones Especiales - BrawlWear</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+          margin: 0;
+          font-family: 'Bangers', cursive;
+          background: linear-gradient(#0c0c0c, #111);
+          color: #fff;
+        }
+    
+        header {
+          background: #ffcc00;
+          padding: 20px;
+          text-align: center;
+          color: #000;
+          font-size: 2.5em;
+          text-shadow: 2px 2px #fff;
+        }
+    
+        section {
+          padding: 50px 20px;
+          text-align: center;
+        }
+    
+        h1 {
+          font-size: 3em;
+          margin-bottom: 30px;
+        }
+    
+        .colecciones {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 40px;
+          padding: 20px;
+        }
+    
+        .coleccion {
+          position: relative;
+          overflow: hidden;
+          border-radius: 20px;
+          box-shadow: 0 0 30px #ffcc00;
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
+    
+        .coleccion:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 50px #ff6600;
+        }
+    
+        .coleccion img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s;
+          filter: brightness(0.8);
+        }
+    
+        .coleccion:hover img {
+          transform: scale(1.1);
+          filter: brightness(1);
+        }
+    
+        .coleccion-texto {
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+          background: rgba(0, 0, 0, 0.7);
+          padding: 15px 20px;
+          border-radius: 10px;
+          text-align: left;
+        }
+    
+        .coleccion-texto h2 {
+          margin: 0;
+          color: #ffcc00;
+          font-size: 1.8em;
+        }
+    
+        .coleccion-texto p {
+          margin-top: 5px;
+          font-size: 1em;
+          color: #ccc;
+        }
+    
+        .btn {
+          display: inline-block;
+          margin-top: 40px;
+          padding: 15px 30px;
+          background: #ff3333;
+          color: white;
+          font-size: 1.5em;
+          border-radius: 50px;
+          text-decoration: none;
+          transition: background 0.3s;
+        }
+    
+        .btn:hover {
+          background: #cc0000;
+        }
+    
+        footer {
+          background: #111;
+          color: #777;
+          text-align: center;
+          padding: 20px;
+          font-size: 0.9em;
+          margin-top: 50px;
+        }
+      </style>
+</head>
+<body>
+    <header>
+        ¡Colecciones Especiales Brawler!
+      </header>
+      <div class="barras"><button onclick="abrir_cerrar_menu()" class="boton_menu" id="x"></button>
+      </div>
+      <nav id="menu" class="desplegable">
+          <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="Catalogo.html">Catalogo</a></li>
+              <li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
+              <li><a href="Contactanos.html">Contactanos</a></li>
+
+          </ul>
+      </nav>
+      
+      <section>
+        <h1>⭐ ¡Acompañate de Tú Brawler Favorito! ⭐</h1>
+      
+        <div class="colecciones">
+      
+          <div class="coleccion">
+            <img src="coleccion de leon.jpg" alt="Colección Leon">
+            <div class="coleccion-texto">
+              <h2>Leon Camuflaje</h2>
+              <p>Desaparece en estilo con ropa inspirada en el maestro del sigilo.</p>
+            </div>
+          </div>
+      
+          <div class="coleccion">
+            <img src="coleccion de crow.jpg" alt="Colección Crow">
+            <div class="coleccion-texto">
+              <h2>Crow Veneno</h2>
+              <p>Oscuro, letal y elegante. Como Crow, pero en la vida real.</p>
+            </div>
+          </div>
+      
+          <div class="coleccion">
+            <img src="coleccionde spike.jpg" alt="Colección Spike">
+            <div class="coleccion-texto">
+              <h2>Spike Fiesta</h2>
+              <p>Divertido, colorido y explosivo: ¡como tu espíritu brawler!</p>
+            </div>
+          </div>
+      
+          
+      
+          <div class="coleccion">
+            <img src="coleccion de sandy.webp" alt="Colección Sandy">
+            <div class="coleccion-texto">
+              <h2>Sandy Sueños</h2>
+              <p>Conquista la calma del desierto con estilo ultra relajado.</p>
+            </div>
+          </div>
+      
+          <div class="coleccion">
+            <img src="coleccion Edgar.jpg" alt="Colección Edgar">
+            <div class="coleccion-texto">
+              <h2>Edgar Rebelde</h2>
+              <p>Para los que viven al límite, con el corazón al 1000%.</p>
+            </div>
+          </div>
+      
+        </div>
+      
+        <a href="index.html" class="btn">Regresar al Inicio</a>
+      
+      </section>
+      
+      <footer>
+        © 2025 BrawlWear. Ediciones limitadas para verdaderos campeones.
+      </footer>
+      <script src="main.js"></script>
+    
+</body>
+</html>
