@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+      margin: 0;
+      font-family: 'Bangers', cursive;
+      background: linear-gradient(to bottom, #111, #1a1a1a);
+      color: white;
+    }
+
+    header {
+      background: #ffcc00;
+      color: #000;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 2.5em;
+      text-shadow: 2px 2px #fff;
+    }
+
+    .carrito {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #222;
+      border: 2px solid #ffcc00;
+      padding: 15px 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px #ffcc00;
+    }
+
+    .item img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+    }
+
+    .detalle {
+      flex-grow: 1;
+      margin-left: 20px;
+      text-align: left;
+    }
+
+    .detalle h3 {
+      margin: 0;
+      color: #ff3333;
+      font-size: 1.5em;
+    }
+
+    .detalle p {
+      margin: 5px 0;
+      font-size: 1em;
+      color: #ccc;
+    }
+
+    .precio {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #00ff88;
+    }
+
+    .cantidad {
+      margin-right: 20px;
+      font-size: 1.2em;
+    }
+
+    .eliminar {
+      background: #ff3333;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      font-size: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .eliminar:hover {
+      background: #cc0000;
+    }
+
+    .total {
+      text-align: right;
+      font-size: 2em;
+      margin-top: 30px;
+      color: #00ff88;
+    }
+
+    .boton-finalizar {
+      display: block;
+      margin: 40px auto 0;
+      padding: 15px 40px;
+      font-size: 1.5em;
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .boton-finalizar:hover {
+      background: #ffaa00;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      background: #111;
+      color: #aaa;
+    }
+  </style>
+<body>
+    <header>
+        🛒 Tu Carrito Brawler
+      </header>
+    <div class="barras"><button onclick="abrir_cerrar_menu()" class="boton_menu" id="x"></button>
+    </div>
+    <nav id="menu" class="desplegable">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Catalogo.html">Catalogo</a></li>
+            <li><a href="Colecciones.html">Colecciones</a></li>
+            <li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
+
+        </ul>
+    </nav>
+    <section class="carrito">
+
+        <div class="item">
+          <img src="leon_brawl_stars_hoodie_2.jpg" alt="Leon Hoodie">
+          <div class="detalle">
+            <h3>Sudadera Leon Camuflaje</h3>
+            <p>Talla: M | Cantidad: <span class="cantidad">1</span></p>
+          </div>
+          <div class="precio">Q29.99</div>
+          <button class="eliminar">Eliminar</button>
+        </div>
+      
+        <div class="item">
+          <img src="hoodie crow.jpg" alt="Crow Tee">
+          <div class="detalle">
+            <h3>Sudadera Crow Veneno</h3>
+            <p>Talla: L | Cantidad: <span class="cantidad">2</span></p>
+          </div>
+          <div class="precio">Q49.98</div>
+          <button class="eliminar">Eliminar</button>
+        </div>
+        <div class="item">
+            <img src="coleccion de sandy.webp" alt="Crow Tee">
+            <div class="detalle">
+              <h3>Colección Sandy</h3>
+              <p>Talla: L | Cantidad: <span class="cantidad">3</span></p>
+            </div>
+            <div class="precio">Q235.98</div>
+            <button class="eliminar">Eliminar</button>
+          </div>
+          <div class="item">
+            <img src="spike camisa.jpg" alt="Crow Tee">
+            <div class="detalle">
+              <h3>Spike Camisa Facha</h3>
+              <p>Talla: XL | Cantidad: <span class="cantidad">1</span></p>
+            </div>
+            <div class="precio">Q79.98</div>
+            <button class="eliminar">Eliminar</button>
+          </div>
+      
+        <div class="total">
+          Total: Q395.93
+        </div>
+      
+        <button class="boton-finalizar">Finalizar Compra</button>
+      
+      </section>
+      
+      <footer>
+        © 2025 BrawlWear. No oficial de Supercell, pero 100% hecho con pasión.
+      </footer>
+    <script src="main.js"></script>
+</body>
+</html>
