@@ -3,106 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contactanos</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-          margin: 0;
-          font-family: 'Bangers', cursive;
-          background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
-          color: white;
-        }
-    
-        header {
-          background: #ffcc00;
-          color: #000;
-          text-align: center;
-          padding: 30px 20px;
-          font-size: 2.5em;
-          text-shadow: 2px 2px #fff;
-        }
-    
-        .sobre-nosotros {
-          padding: 50px 20px;
-          text-align: center;
-          max-width: 1000px;
-          margin: 0 auto;
-        }
-    
-        .sobre-nosotros h1 {
-          font-size: 3em;
-          color: #ffcc00;
-          margin-bottom: 20px;
-        }
-    
-        .sobre-nosotros p {
-          font-size: 1.4em;
-          line-height: 1.7em;
-          color: #ccc;
-          margin-bottom: 40px;
-        }
-    
-        .stats {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 30px;
-        }
-    
-        .stat {
-          background: #292929;
-          border: 2px solid #ffcc00;
-          padding: 20px 30px;
-          border-radius: 15px;
-          width: 220px;
-          box-shadow: 0 0 15px #ffcc00;
-          transition: transform 0.3s;
-        }
-    
-        .stat:hover {
-          transform: scale(1.05);
-        }
-    
-        .stat h2 {
-          color: #ff3333;
-          font-size: 2.5em;
-          margin: 0;
-        }
-    
-        .stat p {
-          margin-top: 10px;
-          font-size: 1.1em;
-          color: #fff;
-        }
-    
-        .equipo {
-          margin-top: 60px;
-        }
-    
-        .equipo img {
-          width: 150px;
-          height: 150px;
-          border-radius: 50%;
-          object-fit: cover;
-          border: 4px solid #ffcc00;
-          margin: 20px;
-          box-shadow: 0 0 15px #ff3333;
-        }
-    
-        footer {
-          margin-top: 60px;
-          padding: 20px;
-          text-align: center;
-          background: #111;
-          color: #aaa;
-        }
-      </style>
+      .contactanos {
+display: flex;
+justify-content: space-between;
+padding: 60px 20px;
+background-color: #fff3e0;
+color: #4e342e;
+gap: 50px;
+flex-wrap: wrap;
+}
+
+.contactanos h2 {
+font-size: 36px;
+color: #c62828;
+margin-bottom: 20px;
+text-align: center;
+width: 100%;
+}
+
+.contactanos .contacto-info {
+flex: 1 1 400px;
+max-width: 600px;
+}
+
+.contactanos .contacto-info p {
+font-size: 18px;
+text-align: center;
+margin-bottom: 30px;
+}
+
+.contactanos .info {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+}
+
+.contactanos .info div {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.contactanos .info i {
+font-size: 24px;
+color: #c62828;
+}
+
+.contactanos .formulario {
+flex: 1 1 400px;
+max-width: 500px;
+background-color: #fff;
+border-radius: 12px;
+padding: 30px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contactanos .formulario h3 {
+font-size: 24px;
+color: #d84315;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.contactanos .formulario input, .contactanos .formulario textarea {
+width: 100%;
+padding: 12px;
+margin-bottom: 20px;
+border: 1px solid #fbc02d;
+border-radius: 8px;
+font-size: 16px;
+outline: none;
+}
+
+.contactanos .formulario textarea {
+height: 150px;
+}
+
+.contactanos .formulario .submit-btn {
+background-color: #fbc02d;
+color: #fff;
+padding: 15px 20px;
+border: none;
+border-radius: 8px;
+font-size: 18px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.contactanos .formulario .submit-btn:hover {
+background-color: #d84315;
+}
+
+/* Mapa interactivo */
+.mapa {
+flex: 1 1 400px;
+max-width: 600px;
+background-color: #fff;
+padding: 20px;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+width: 100%;
+height: 400px;
+border-radius: 8px;
+}
+
+/* Animaciones */
+.contacto-info, .formulario {
+opacity: 0;
+transform: translateY(30px);
+animation: fadeInUp 1s forwards;
+}
+
+.contacto-info {
+animation-delay: 0.3s;
+}
+
+.formulario {
+animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+@media (max-width: 768px) {
+.contactanos {
+  flex-direction: column;
+  text-align: center;
+}
+}
+  </style>
 
 </head>
 <body>
-    <header>
-        ¡Conoce Nuestro Team!
-      </header>
+    
     
     <div class="barras"><button onclick="abrir_cerrar_menu()" class="boton_menu" id="x"></button>
     </div>
@@ -111,47 +155,49 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="Catalogo.html">Catalogo</a></li>
             <li><a href="Colecciones.html">Colecciones</a></li>
-            <li><a href="carrito.html">Carrito de Compras</a></li>
+            
 
         </ul>
     </nav>
-    <section class="sobre-nosotros">
-        <h1>Sobre Nosotros</h1>
-        <p>
-          En <strong>BrawlWear</strong>, no solo diseñamos ropa: creamos identidad.  
-          Somos un equipo apasionado por <span style="color:#ff3333;">Brawl Stars</span> que decidió llevar el estilo del juego al mundo real.
-          Queremos que cada prenda sea un poder estelar que te represente en el campo de batalla... o en la calle.
-        </p>
-      
-        <div class="stats">
-          <div class="stat">
-            <h2>+10K</h2>
-            <p>Brawlers con flow</p>
+    <section class="contactanos">
+      <div class="contacto-info">
+        <h2>¡Contáctanos!</h2>
+        <p>Estamos para ayudarte. Si tienes alguna pregunta, comentario o sugerencia, ¡no dudes en escribirnos!</p>
+        <div class="info">
+          <div class="direccion">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Dirección: Calle Principal, Guatemala, Villa Nueva</p>
           </div>
-          <div class="stat">
-            <h2>7</h2>
-            <p>Colecciones legendarias</p>
+          <div class="telefono">
+            <i class="fas fa-phone-alt"></i>
+            <p>Teléfono: 3673 9533</p>
           </div>
-          <div class="stat">
-            <h2>99%</h2>
-            <p>Clientes felices</p>
-          </div>
-          <div class="stat">
-            <h2>🔥</h2>
-            <p>Estilo de batalla garantizado</p>
+          <div class="email">
+            <i class="fas fa-envelope"></i>
+            <p>Email: contacto@doctorpc.com</p>
           </div>
         </div>
+      </div>
+    
+      <div class="formulario">
+        <h3>Envíanos tu mensaje</h3>
+        <form action="#" method="POST" id="formularioContact">
+          <input type="text" name="nombre" placeholder="Tu Nombre" required>
+          <input type="email" name="email" placeholder="Tu Email" required>
+          <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea>
+          <button type="submit" class="submit-btn">Enviar Mensaje</button>
+        </form>
+      </div>
+    
       
-        <div class="equipo">
-          <h1>Nuestro Equipo</h1>
-          <img src="Fundador.png" alt="Fundador" title="El Jefe Brawler">
-          <img src="Yo como diseñador.jpeg" alt="Diseñador" title="Diseñador Pro">
-          <img src="Fundador.png" alt="Comunidad" title="Líder de Comunidad">
-        </div>
-      </section>
-      
+      <div class="mapa">
+        <h3>Encuéntranos en el mapa</h3>
+        <h3>andamos por donde quieras</h3>
+        <div id="map"></div>
+      </div>
+    </section>
       <footer>
-        © 2025 BrawlWear. No oficial de Supercell, pero 100% hecho con pasión.
+        © 2025 DOCTOR PC. No oficial, pero 100% hecho con pasión.
       </footer>
       
 
